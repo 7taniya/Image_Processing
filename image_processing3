@@ -1,0 +1,14 @@
+#ImageFilter Class 
+#Filter method
+from PIL import Image, ImageFilter
+
+img = Image.open('retina1.webp')
+enh_img = img.filter(ImageFilter.DETAIL)
+enh_img.show()
+#ImageEnhance Class
+#enhance method
+#Pillow library
+from PIL import Image,ImageEnhance
+img = Image.open('retina1.webp')
+img_con = ImageEnhance.Contrast(img)
+img_con.enhance(1.3).show("90% more contrast")
