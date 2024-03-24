@@ -1,0 +1,18 @@
+#import pillow library from Image class
+from PIL import Image
+
+# To create an object called img
+img = Image.open('retina1.webp')
+print(img.mode)
+
+#Crop the method
+box=(150,200,300,600)
+crop_img=img.crop(box)#left,upper,right,lower
+crop_img.show()
+
+#Flip an image using transfer function
+#1.Image.FLIP_LEFT_RIGHT
+#2.Image.FLIP_TOP_BUTTOM
+#3.Image.ROTATE_90,180,270,360
+flip_img= img.transpose(Image.FLIP_LEFT_RIGHT)
+flip_img.show()
