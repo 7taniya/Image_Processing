@@ -1,0 +1,28 @@
+#import img library
+from PIL import Image
+
+img=Image.open('retina1.webp')
+img.show()
+
+#Accessing size of the image
+#Here size is an attribute not an function
+image_size=img.size
+print(image_size)
+
+#Change the format
+#Using save method we can't call show because it will return to none so we first save the image then open the newly saved data
+img.save('retina1.png')
+new_img=Image.open('retina1.png')
+new_img.show()
+
+#change the size of the image
+img.thumbnail((100,100))
+img.show()
+
+#To rotate the object
+img.rotate(45).show()
+
+#change the image to gray scale image
+#L stand Luminous
+gray_img=Image.open('retina1.webp').convert('L')
+gray_img.show()
